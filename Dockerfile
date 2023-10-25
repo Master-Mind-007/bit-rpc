@@ -9,7 +9,6 @@ FROM node:16-alpine as alpine
 WORKDIR /workspace
 COPY --from=builder /workspace .
 RUN apk --update add git
-EXPOSE 3002
 
 # Use an Ubuntu stage
 FROM ubuntu:20.04
@@ -29,10 +28,10 @@ RUN tar xzf bitcoin-25.1-x86_64-linux-gnu.tar.gz
 RUN install -m 0755 -o root -g root -t /usr/local/bin bitcoin-25.1/bin/*
 COPY bitcoin.conf /root/.bitcoin/bitcoin.conf
 
-
 WORKDIR /workspace
-COPY --from=builder /workspace .
+COPY --from=alpine /workspace .
 COPY run.sh .
 RUN chmod +x run.sh
+EXPOSE 3002
 
 CMD ["bash", "run.sh"]
