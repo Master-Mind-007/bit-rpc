@@ -18,9 +18,12 @@ RUN apt-get update && \
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get -qy install git wget curl vim-tiny nano npm net-tools libssl-dev libgirepository1.0-dev gobject-introspection cairo-5c libcairo-gobject2 libcairo2-dev pkg-config && \
+RUN apt-get -qy install git wget curl vim-tiny nano net-tools libssl-dev libgirepository1.0-dev gobject-introspection cairo-5c libcairo-gobject2 libcairo2-dev pkg-config && \
     apt-get -qy install libpq-dev postgresql-client-common postgresql-common && \
     apt-get -qy clean
+
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+RUN nvm install v16
 
 WORKDIR /bitcore
 RUN wget https://bitcoincore.org/bin/bitcoin-core-25.1/bitcoin-25.1-x86_64-linux-gnu.tar.gz
