@@ -42,7 +42,7 @@ else
   echo "Bitcoind is not running. Trying to start it..."
 
   # Use a while loop to keep trying to start bitcoind
-  while not check_bitcoind_running
+  while ! check_bitcoind_running
   do
     bitcoind -daemon
     sleep 5
