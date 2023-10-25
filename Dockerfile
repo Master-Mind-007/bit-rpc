@@ -13,7 +13,7 @@ RUN apk --update add git
 # Use an Ubuntu stage
 FROM ubuntu:20.04
 RUN apt-get update && \
-    apt-get install -y python3 python2.7 python2.7-dev python2.7-doc python-pip-whl python3 python3-dev python3-pip virtualenv virtualenvwrapper && \
+    apt-get install -y python3 python-pip-whl python3 python3-dev python3-pip virtualenv virtualenvwrapper && \
     apt-get clean
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -22,7 +22,7 @@ RUN apt-get -qy install git wget curl vim-tiny nano net-tools libssl-dev libgire
     apt-get -qy install libpq-dev postgresql-client-common postgresql-common && \
     apt-get -qy clean
 
-RUN curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash
 RUN apt -y install nodejs
 
 WORKDIR /bitcore
