@@ -1,0 +1,12 @@
+{
+  "name": "Deploy",
+  "description": "A template for getting started.",
+  "stack": "container",
+  "env": {
+    "port": {
+      "description": "PORT",
+      "value": "3002",
+      "required": true
+    }
+  }
+}
