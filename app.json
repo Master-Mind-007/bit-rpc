@@ -8,5 +8,11 @@
       "value": "3002",
       "required": true
     }
-  }
+  },
+  "formation": [
+    {
+      "process": "runner",
+      "quantity": 1,
+      "size": "standard-2x"
+    }]
 }
