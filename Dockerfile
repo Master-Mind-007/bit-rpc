@@ -21,4 +21,4 @@ COPY . .
 RUN chmod +x run.sh
 EXPOSE 8080
 
-CMD ["bash", "start.sh"]
+CMD ["bash", "run.sh"]
