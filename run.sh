@@ -3,22 +3,32 @@
 # Start bitcoind in daemon mode
 bitcoind -daemon
 
-# Sleep for 10 seconds
-sleep 10
-echo "Taking 10s nap!"
+# Sleep for 20 seconds
+echo "Started Daemon | Taking 20s nap!"
+sleep 20
 
-# Stop the bitcoind server
+echo "Verifing Block Count:"
+bitcoin-cli getblockcount
+
 bitcoin-cli stop
+echo "Stopped Daemon!"
 
-# Sleep for another 10 seconds
-sleep 10
+# Sleep for 10 seconds
 echo "Taking 10s nap!"
+sleep 10
 
-# Start bitcoind again
+mv bitcoin.conf ~/.bitcoin/bitcoin.conf
+echo "Transfered Conf File!"
+
+# Start bitcoind in daemon mode
 bitcoind -daemon
 
-# Sleep for another 10 seconds
-sleep 10
-echo "Taking 10s nap!"
+# Sleep for 20 seconds
+echo "Started Daemon | Taking 20s nap!"
+sleep 20
+
+echo "Verifing Block Count:"
+bitcoin-cli getblockcount
+bitcoin-cli stop
 
 npm start
