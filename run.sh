@@ -8,8 +8,8 @@ echo "Started Redis Server!"
 bitcoind -daemon
 
 # Sleep for 20 seconds
-echo "Started Daemon | Taking 20s nap!"
-sleep 20
+echo "Started Daemon | Taking 10s nap!"
+sleep 10
 
 echo "Verifing Block Count:"
 bitcoin-cli getblockcount
@@ -19,7 +19,7 @@ echo "Stopped Daemon!"
 
 # Sleep for 10 seconds
 echo "Taking 10s nap!"
-sleep 10
+sleep 5
 
 mv bitcoin.conf ~/.bitcoin/bitcoin.conf
 echo "Transfered Conf File!"
@@ -64,7 +64,8 @@ fi
 
 echo "Verifing Block Count:"
 bitcoin-cli getblockcount
-echo "BitCore Logs"
+
+echo "BitCore Logs!"
 tail ~/.bitcoin/debug.log
 
 
