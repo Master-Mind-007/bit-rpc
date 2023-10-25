@@ -34,13 +34,6 @@ check_bitcoind_running() {
   fi
 }
 
-# Start bitcoind in daemon mode
-bitcoind -daemon
-
-# Sleep for 20 seconds
-echo "Started Daemon | Taking 10s nap!"
-sleep 10
-
 # Check if bitcoind is running
 if check_bitcoind_running
 then
