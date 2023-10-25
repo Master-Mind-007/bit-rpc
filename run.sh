@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#Initiate Redis Server
+systemctl start redis-server
+echo "Started Redis Server!"
+
 # Start bitcoind in daemon mode
 bitcoind -daemon
 
