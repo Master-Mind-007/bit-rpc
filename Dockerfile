@@ -18,7 +18,7 @@ RUN apt-get update && \
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get -qy install git wget curl vim-tiny nano net-tools libssl-dev libgirepository1.0-dev gobject-introspection cairo-5c libcairo-gobject2 libcairo2-dev pkg-config && \
+RUN apt-get -qy install redis-server git wget curl vim-tiny nano net-tools libssl-dev libgirepository1.0-dev gobject-introspection cairo-5c libcairo-gobject2 libcairo2-dev pkg-config && \
     apt-get -qy install libpq-dev postgresql-client-common postgresql-common && \
     apt-get -qy clean
 
