@@ -22,8 +22,8 @@ RUN apt-get -qy install git wget curl vim-tiny nano net-tools libssl-dev libgire
     apt-get -qy install libpq-dev postgresql-client-common postgresql-common && \
     apt-get -qy clean
 
-RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
-RUN nvm install v16
+RUN curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
+RUN apt -y install nodejs
 
 WORKDIR /bitcore
 RUN wget https://bitcoincore.org/bin/bitcoin-core-25.1/bitcoin-25.1-x86_64-linux-gnu.tar.gz
