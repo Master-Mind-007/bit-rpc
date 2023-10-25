@@ -33,5 +33,7 @@ sleep 20
 
 echo "Verifing Block Count:"
 bitcoin-cli getblockcount
+tail ~/.bitcoin/debug.log
+
 
 npm start
