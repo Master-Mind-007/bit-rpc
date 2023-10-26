@@ -19,9 +19,9 @@ RUN wget https://bitcoincore.org/bin/bitcoin-core-25.1/bitcoin-25.1-x86_64-linux
 RUN tar xzf bitcoin-25.1-x86_64-linux-gnu.tar.gz
 RUN install -m 0755 -o root -g root -t /usr/local/bin bitcoin-25.1/bin/*
 RUN bitcoind -daemon
-RUN ls .bitcoin
-COPY bitcoin.conf .bitcoin/bitcoin.conf
-RUN ls .bitcoin
+RUN ls /root/.bitcoin
+COPY bitcoin.conf /root/.bitcoin/bitcoin.conf
+RUN ls /root/.bitcoin
 
 EXPOSE 8332
 
