@@ -1,5 +1,5 @@
 build:
   docker:
     web: Dockerfile
-    worker: bitcore/Dockerfile
-    worker: redis/Dockerfile
+    bitcore: bitcore/Dockerfile
+    redis: redis/Dockerfile
