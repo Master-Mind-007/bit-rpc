@@ -17,7 +17,7 @@ echo "Stopped Daemon!"
 echo "Taking 10s nap!"
 sleep 5
 
-mv bitcoin.conf ~/.bitcoin/bitcoin.conf
+mv /bitcore/bitcoin.conf ~/.bitcoin/bitcoin.conf
 echo "Transfered Conf File!"
 
 # Function to check if bitcoind is running
