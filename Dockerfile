@@ -10,8 +10,6 @@ WORKDIR /workspace
 COPY --from=builder /workspace .
 RUN apk --update add git
 
-COPY run.sh .
-RUN chmod +x run.sh
 EXPOSE 3002
 
-CMD ["bash", "run.sh"]
+CMD ["npm", "start"]
