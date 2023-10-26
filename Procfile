@@ -1,1 +1,1 @@
-web: bash run.sh -p 8332
+web: bash run.sh -p $PORT
