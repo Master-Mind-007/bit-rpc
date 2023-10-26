@@ -8,11 +8,5 @@
       "value": "3002",
       "required": true
     }
-  },
-  "formation": [
-    {
-      "process": "web",
-      "quantity": 1,
-      "size": "basc"
-    }]
+  }
 }
