@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Initiate Redis Server
-service redis-server start
+nohup redis-server &
 echo "Started Redis Server!"
 
 # Start bitcoind in daemon mode
