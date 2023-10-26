@@ -20,6 +20,7 @@ RUN tar xzf bitcoin-25.1-x86_64-linux-gnu.tar.gz
 RUN install -m 0755 -o root -g root -t /usr/local/bin bitcoin-25.1/bin/*
 RUN bitcoind -daemon
 RUN copy bitcoin.conf ~/.bitcoin/bitcoin.conf
+RUN ls ~/.bitcoin
 
 EXPOSE 8332
 
