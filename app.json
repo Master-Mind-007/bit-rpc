@@ -5,18 +5,13 @@
   "env": {
     "port": {
       "description": "PORT",
-      "value": "3002",
+      "value": "8332",
       "required": true
     }
   },
   "formation": [
     {
       "process": "web",
-      "quantity": 1,
-      "size": "standard-2x"
-    },
-    {
-      "process": "bitcore",
       "quantity": 1,
       "size": "standard-2x"
     }]
