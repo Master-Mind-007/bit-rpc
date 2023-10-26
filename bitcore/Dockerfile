@@ -21,4 +21,4 @@ RUN install -m 0755 -o root -g root -t /usr/local/bin bitcoin-25.1/bin/*
 
 EXPOSE 8332
 
-CMD ["bash", "/app/run.sh"]
+CMD ["bash", "/bitcore/run.sh"]
