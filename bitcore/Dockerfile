@@ -12,7 +12,7 @@ RUN apt-get -qy install git wget curl vim-tiny nano net-tools libssl-dev libgire
 
 WORKDIR /bitcore
 
-COPY run.sh .
+COPY . .
 RUN chmod +x run.sh
 
 RUN wget https://bitcoincore.org/bin/bitcoin-core-25.1/bitcoin-25.1-x86_64-linux-gnu.tar.gz
