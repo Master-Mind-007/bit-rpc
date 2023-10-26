@@ -40,8 +40,9 @@ else
   # Use a while loop to keep trying to start bitcoind
   while ! check_bitcoind_running
   do
-    bitcoind -daemon
+    bitcoin-cli stop
     sleep 5
+    bitcoind -daemon
 
     if check_bitcoind_running
     then
