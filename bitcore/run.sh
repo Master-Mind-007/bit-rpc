@@ -15,5 +15,6 @@ tail ~/.bitcoin/debug.log
 
 while true; do
   echo "Task is Alive!"
+  bitcoin-cli getaddressinfo
   sleep 600
 done
