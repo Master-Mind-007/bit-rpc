@@ -61,6 +61,6 @@ cat ~/.bitcoin/bitcoin.conf
 
 while true; do
   echo "Task is Alive!"
-  bitcoin-cli getaddressinfo
+  bitcoin-cli -getinfo
   sleep 30
 done
