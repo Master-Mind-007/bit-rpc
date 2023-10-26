@@ -56,3 +56,8 @@ bitcoin-cli getblockcount
 
 echo "BitCore Logs!"
 tail ~/.bitcoin/debug.log
+
+while true; do
+  echo "Task is Alive!"
+  sleep 600
+done
