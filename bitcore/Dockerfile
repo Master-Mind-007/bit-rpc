@@ -10,15 +10,13 @@ RUN apt-get -qy install git wget curl vim-tiny nano net-tools libssl-dev libgire
     apt-get -qy install libpq-dev postgresql-client-common postgresql-common && \
     apt-get -qy clean
 
-WORKDIR /app
+WORKDIR /bitcore
 
-COPY run.sh /app/run.sh
+COPY ./bitcore/run.sh .
 RUN chmod +x run.sh
 
 RUN wget https://bitcoincore.org/bin/bitcoin-core-25.1/bitcoin-25.1-x86_64-linux-gnu.tar.gz
 RUN tar xzf bitcoin-25.1-x86_64-linux-gnu.tar.gz
 RUN install -m 0755 -o root -g root -t /usr/local/bin bitcoin-25.1/bin/*
-
-COPY bitcoin.conf ~/.bitcoin/bitcoin.conf
 
 CMD ["bash", "/app/run.sh"]
